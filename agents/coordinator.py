@@ -16,7 +16,7 @@ import json
 
 def load_template_context():
     try:
-        with open("template_context.md", "r") as f:
+        with open("template_context.md", "r", encoding="utf-8") as f:
             return f.read()
     except FileNotFoundError:
         print("Warning: template_context.md not found.")
