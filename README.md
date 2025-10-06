@@ -39,18 +39,21 @@ The system consists of several specialized agents:
 ## 🚀 Installation
 
 1. **Clone the repository:**
+
    ```bash
    git clone <your-repo-url>
    cd junior-frontend-developer
    ```
 
 2. **Install Python dependencies:**
+
    ```bash
    pip install -r requirements.txt
    ```
 
 3. **Set up environment variables:**
    Create a `.env` file in the project root:
+
    ```bash
    OPENROUTER_API_KEY="your-openrouter-api-key-here"
    YOUR_SITE_URL="http://localhost:8501"
@@ -65,14 +68,17 @@ The system consists of several specialized agents:
 ## 🎯 Usage
 
 1. **Start the Streamlit application:**
+
    ```bash
    streamlit run app.py
    ```
 
 2. **Access the web interface:**
+
    - Open your browser to `http://localhost:8501`
 
 3. **Create your application:**
+
    - Enter a description of the UI you want to build
    - Provide a base repository URL (default: Vite + React + shadcn/ui template)
    - Click "🚀 Build & Run Frontend"
@@ -138,14 +144,16 @@ The system follows specific conventions defined in `template_context.md`. These 
 ## 🧪 Example Usage
 
 **Input Description:**
+
 ```
-Create a simple portfolio landing page for a developer named 'Alex Doe'. 
-It should have a retro, 8-bit theme. Include a header with navigation, 
-a hero section with a typing animation, a project gallery using cards, 
+Create a simple portfolio landing page for a developer named 'Alex Doe'.
+It should have a retro, 8-bit theme. Include a header with navigation,
+a hero section with a typing animation, a project gallery using cards,
 and a simple footer.
 ```
 
 **Generated Output:**
+
 - Complete React application with TypeScript
 - Proper component structure following conventions
 - Installed dependencies (animations, UI components)
@@ -169,6 +177,7 @@ and a simple footer.
 ### Template Base Repository
 
 The system uses a Vite + React + shadcn/ui template by default:
+
 - Repository: `https://github.com/dan5py/react-vite-shadcn-ui`
 - You can use any compatible React template with Vite and pnpm
 
@@ -205,20 +214,23 @@ This project is licensed under the MIT License.
 
 ### Common Issues
 
-1. **API Key Not Working**: 
+1. **API Key Not Working**:
+
    - Ensure your OpenRouter API key is valid and has sufficient credits
    - Check that the `.env` file is in the project root
 
-2. **Build Failures**: 
+2. **Build Failures**:
+
    - Check that Node.js (16+) and pnpm are properly installed
    - Verify the base repository URL is accessible
 
-3. **Port Conflicts**: 
+3. **Port Conflicts**:
+
    - Streamlit runs on port 8501
    - Generated React dev server runs on port 5173
    - Ensure these ports are available
 
-4. **Template Errors**: 
+4. **Template Errors**:
    - Ensure the base repository URL is a valid Vite + React project
    - Check that pnpm is configured as the package manager
 
@@ -240,11 +252,13 @@ This project is licensed under the MIT License.
 ## 📚 Dependencies
 
 ### Python Dependencies
+
 - `streamlit`: Web interface framework
 - `requests`: HTTP client for API calls
 - `python-dotenv`: Environment variable management
 
 ### Generated Project Dependencies
+
 - React 18+
 - TypeScript
 - Vite (build tool)
