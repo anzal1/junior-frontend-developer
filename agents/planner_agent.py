@@ -14,7 +14,9 @@ Your plan MUST be a JSON object with four keys: `codename`, `npm_dependencies`, 
 - `codename`: A creative, two-word, lowercase, snake_cased project name.
 - `npm_dependencies`: A list of any NEW npm packages to install.
 - `shadcn_dependencies`: A list of any NEW shadcn-ui components to add.
-- `components`: A list of objects for custom components to create.
+- `components`: A list of objects for custom components to create. Each component object MUST have:
+  - `file_path`: The relative path from src directory (e.g., "components/Header.tsx", "App.tsx")
+  - `description`: A clear description of what the component should do
 
 **CRITICAL RULE:** If a UI element is a standard shadcn-ui component, you **MUST** list its name in `shadcn_dependencies`. **DO NOT** add it to `components`.
 

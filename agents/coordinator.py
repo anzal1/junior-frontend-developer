@@ -134,8 +134,12 @@ class Coordinator:
                 # --- END: FIX ---
 
                 elif task["type"] == "component":
-                    self.st.write(
-                        f"Creating Component: {task['payload'].get('file_path', 'Unknown')}")
+                    component_name = task['payload'].get('file_path', 'Unknown Component')
+                    if not task['payload'].get('file_path'):
+                        self.log_error(f"Component missing file_path: {task['payload']}")
+                        continue
+                    
+                    self.st.write(f"Creating Component: {component_name}")
                     result = self.component_agent.create_component(
                         task["payload"], self.project_path)
                     if result.get("tool_results"):
