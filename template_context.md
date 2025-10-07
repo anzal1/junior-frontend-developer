@@ -2,6 +2,34 @@
 
 This guide outlines the specific file structure and coding conventions for the Vite + React + shadcn-ui template. You MUST follow these rules when generating plans and code.
 
+## 0. Plan Structure Format
+
+When creating a plan, the JSON structure must be:
+
+```json
+{
+  "codename": "project_name",
+  "npm_dependencies": ["package1", "package2"],
+  "shadcn_dependencies": ["button", "card", "input"],
+  "components": [
+    {
+      "file_path": "components/Header.tsx",
+      "description": "Header component with navigation and logo"
+    },
+    {
+      "file_path": "components/Hero.tsx", 
+      "description": "Hero section with title and call to action"
+    }
+  ]
+}
+```
+
+**CRITICAL REQUIREMENTS for components:**
+- Each component object MUST have `file_path` and `description` properties
+- `file_path` should be the relative path from the `src` directory
+- Use appropriate subdirectories: `components/layout/`, `components/common/`, etc.
+- Follow PascalCase naming for component files (e.g., `Header.tsx`, `UserProfile.tsx`)
+
 ## 1. Global CSS Import
 
 The global stylesheet is located at `src/styles/globals.css`. It is **ONLY** imported once in the entire application, at the top of `src/main.tsx`.
